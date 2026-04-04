@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi. | Reservasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        ::-webkit-calendar-picker-indicator { filter: invert(1); } /* Supaya icon date/time jadi putih */
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-white selection:bg-amber-500 selection:text-black">
+
+    <nav class="fixed top-8 left-0 w-full z-[100] px-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between bg-[#111111] border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-2xl p-2 pl-8">
+            
+            <div class="flex items-center gap-2 group cursor-pointer">
+                <div class="w-2 h-2 rounded-full bg-amber-500 group-hover:scale-150 transition-transform"></div>
+                <span class="text-white font-black text-lg tracking-[0.2em] uppercase">KOPI.</span>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-2">
+                <a href="index.html" class="text-gray-400 hover:text-white px-4 py-2 text-xs font-bold uppercase tracking-widest transition-all hover:bg-white/5 rounded-xl">Home</a>
+                <a href="index.html" class="text-gray-400 hover:text-white px-4 py-2 text-xs font-bold uppercase tracking-widest transition-all hover:bg-white/5 rounded-xl">Story</a>
+                <a href="index.html" class="text-gray-400 hover:text-white px-4 py-2 text-xs font-bold uppercase tracking-widest transition-all hover:bg-white/5 rounded-xl">Menu</a>
+                
+                <div class="h-4 w-[1px] bg-white/10 mx-2"></div>
+
+                <a href="reservation.html" class="bg-white text-black hover:bg-amber-500 hover:text-white px-6 py-3 rounded-xl text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 transform active:scale-95">
+                    Reservasi Sekarang
+                </a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <label for="nav-control" class="p-4 cursor-pointer">
+                    <input type="checkbox" id="nav-control" class="peer hidden">
+                    
+                    <div class="w-5 h-4 flex flex-col justify-between">
+                        <span class="w-full h-[2px] bg-white rounded-full transition-all peer-checked:rotate-45 peer-checked:translate-y-[7px]"></span>
+                        <span class="w-3/4 h-[2px] bg-white rounded-full self-end transition-all peer-checked:opacity-0"></span>
+                        <span class="w-full h-[2px] bg-white rounded-full transition-all peer-checked:-rotate-45 peer-checked:-translate-y-[7px]"></span>
+                    </div>
+
+                    <div class="absolute top-full right-0 left-0 mt-4 px-4 opacity-0 scale-95 invisible peer-checked:opacity-100 peer-checked:scale-100 peer-checked:visible transition-all duration-300 origin-top">
+                        <div class="bg-[#1a1a1a] border border-white/10 p-6 rounded-3xl shadow-2xl flex flex-col space-y-4">
+                            <a href="index.html" class="text-white text-sm font-bold uppercase tracking-widest border-b border-white/5 pb-2">Home</a>
+                            <a href="index.html" class="text-white text-sm font-bold uppercase tracking-widest border-b border-white/5 pb-2">Story</a>
+                            <a href="index.html" class="text-white text-sm font-bold uppercase tracking-widest border-b border-white/5 pb-2">Menu</a>
+                            <a href="index.html" class="bg-amber-600 text-white text-center py-4 rounded-2xl font-black uppercase tracking-widest">Visit Us</a>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <section id="reservation" class="min-h-screen pt-40 pb-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-4 uppercase italic">
+                    Pesan Tempat <span class="text-amber-500 underline decoration-white/10">Terbaikmu.</span>
+                </h2>
+            </div>
+
+            <div class="bg-[#111111] border border-white/5 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-amber-500/10 rounded-full blur-[80px]"></div>
+                
+                <form id="reservationForm" class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-500 ml-2">Nama Lengkap</label>
+                        <input type="text" id="name" required placeholder="Contoh: Budi Santoso" 
+                            class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-amber-500 focus:bg-white/10 transition-all placeholder:text-gray-700">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-500 ml-2">Jumlah Orang</label>
+                        <select id="guests" class="w-full bg-[#1a1a1a] border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-amber-500 transition-all cursor-pointer">
+                            <option value="1-2 Orang">1 - 2 Orang</option>
+                            <option value="3-4 Orang">3 - 4 Orang</option>
+                            <option value="5-8 Orang">5 - 8 Orang</option>
+                            <option value="Group (10+)">Group (10+)</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-500 ml-2">Tanggal Kedatangan</label>
+                        <input type="date" id="date" required 
+                            class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-amber-500 transition-all">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-500 ml-2">Jam</label>
+                        <input type="time" id="time" required 
+                            class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-amber-500 transition-all">
+                    </div>
+
+                    <div class="md:col-span-2 space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-500 ml-2">Catatan (Opsional)</label>
+                        <textarea id="notes" rows="3" placeholder="Sofa area, No smoking, atau sedang merayakan sesuatu?" 
+                            class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-amber-500 transition-all placeholder:text-gray-700"></textarea>
+                    </div>
+
+                    <div class="md:col-span-2 pt-4">
+                        <button type="submit" 
+                            class="w-full bg-amber-500 hover:bg-white text-black font-black uppercase tracking-[0.3em] py-5 rounded-2xl transition-all duration-500 shadow-lg shadow-amber-500/20 flex items-center justify-center gap-3 group">
+                            Confirm Via WhatsApp
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+        <footer class="bg-[#0b0b0b] pt-24 pb-12 border-t border-white/5 text-gray-400">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-16 mb-20">
+                
+                <div class="space-y-8">
+                    <div class="text-3xl font-bold tracking-tighter text-white uppercase">
+                        KOPI<span class="text-amber-500">.</span>
+                    </div>
+                    <p class="text-sm leading-relaxed max-w-xs text-gray-500">
+                        Kami adalah ruang komaborasi, tempat di mana biji kopi pilihan bertemu dengan kreativitas tanpa batas. Kunjungi kami untuk pengalaman kopi yang berbeda.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-amber-500 hover:text-white transition-all">
+                            <span class="text-xs font-bold uppercase">Ig</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-amber-500 hover:text-white transition-all">
+                            <span class="text-xs font-bold uppercase">Tk</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-amber-500 hover:text-white transition-all">
+                            <span class="text-xs font-bold uppercase">Yt</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Explore</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="#home" class="hover:text-amber-500 transition">Our Home</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition">The Story</a></li>
+                        <li><a href="#menu" class="hover:text-amber-500 transition">Menu Signature</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-500 transition">Customer Review</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Open Hours</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li class="flex justify-between border-b border-white/5 pb-2">
+                            <span>Weekdays</span>
+                            <span class="text-white font-semibold">08:00 - 22:00</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/5 pb-2 text-amber-500">
+                            <span>Weekends</span>
+                            <span class="font-semibold">07:00 - 23:00</span>
+                        </li>
+                        <li class="text-xs italic text-gray-600 italic leading-relaxed">
+                            *Jam operasional dapat berubah sewaktu-waktu pada hari libur nasional.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[10px] uppercase tracking-[0.2em] font-semibold text-gray-600">
+                    &copy; 2026 KOPI.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const guests = document.getElementById('guests').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const notes = document.getElementById('notes').value || "-";
+
+            // GANTI NOMOR DI BAWAH INI
+            const adminPhone = "628123456789"; 
+
+            const text = `Halo BEANS! Saya mau reservasi tempat:%0A%0A` +
+                         `*Nama:* ${name}%0A` +
+                         `*Jumlah:* ${guests}%0A` +
+                         `*Tanggal:* ${date}%0A` +
+                         `*Jam:* ${time}%0A` +
+                         `*Catatan:* ${notes}%0A%0A` +
+                         `Mohon diproses ya, terima kasih!`;
+
+            const whatsappURL = `https://wa.me/${adminPhone}?text=${text}`;
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi. | Menu Kami</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0a0a0a; }
+        .menu-card:hover img { transform: scale(1.1); }
+    </style>
+</head>
+<body class="text-white selection:bg-amber-500 selection:text-black">
+
+    <nav class="fixed top-8 left-0 w-full z-[100] px-4">
+        <div class="max-w-4xl mx-auto flex items-center justify-between bg-[#111111] border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5)] rounded-2xl p-2 pl-8">
+            
+            <div class="flex items-center gap-2 group cursor-pointer">
+                <div class="w-2 h-2 rounded-full bg-amber-500 group-hover:scale-150 transition-transform"></div>
+                <span class="text-white font-black text-lg tracking-[0.2em] uppercase">KOPI.</span>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-2">
+                <a href="index.html" class="text-gray-400 hover:text-white px-4 py-2 text-xs font-bold uppercase tracking-widest transition-all hover:bg-white/5 rounded-xl">Home</a>
+                <a href="index.html" class="text-gray-400 hover:text-white px-4 py-2 text-xs font-bold uppercase tracking-widest transition-all hover:bg-white/5 rounded-xl">Story</a>
+                <a href="index.html" class="text-gray-400 hover:text-white px-4 py-2 text-xs font-bold uppercase tracking-widest transition-all hover:bg-white/5 rounded-xl">Menu</a>
+                
+                <div class="h-4 w-[1px] bg-white/10 mx-2"></div>
+
+                <a href="reservation.html" class="bg-white text-black hover:bg-amber-500 hover:text-white px-6 py-3 rounded-xl text-xs font-black uppercase tracking-[0.2em] transition-all duration-300 transform active:scale-95">
+                    Reservasi Sekarang
+                </a>
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <label for="nav-control" class="p-4 cursor-pointer">
+                    <input type="checkbox" id="nav-control" class="peer hidden">
+                    
+                    <div class="w-5 h-4 flex flex-col justify-between">
+                        <span class="w-full h-[2px] bg-white rounded-full transition-all peer-checked:rotate-45 peer-checked:translate-y-[7px]"></span>
+                        <span class="w-3/4 h-[2px] bg-white rounded-full self-end transition-all peer-checked:opacity-0"></span>
+                        <span class="w-full h-[2px] bg-white rounded-full transition-all peer-checked:-rotate-45 peer-checked:-translate-y-[7px]"></span>
+                    </div>
+
+                    <div class="absolute top-full right-0 left-0 mt-4 px-4 opacity-0 scale-95 invisible peer-checked:opacity-100 peer-checked:scale-100 peer-checked:visible transition-all duration-300 origin-top">
+                        <div class="bg-[#1a1a1a] border border-white/10 p-6 rounded-3xl shadow-2xl flex flex-col space-y-4">
+                            <a href="index.html" class="text-white text-sm font-bold uppercase tracking-widest border-b border-white/5 pb-2">Home</a>
+                            <a href="index.html" class="text-white text-sm font-bold uppercase tracking-widest border-b border-white/5 pb-2">Story</a>
+                            <a href="index.html" class="text-white text-sm font-bold uppercase tracking-widest border-b border-white/5 pb-2">Menu</a>
+                            <a href="index.html" class="bg-amber-600 text-white text-center py-4 rounded-2xl font-black uppercase tracking-widest">Visit Us</a>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-4 italic uppercase">Menu-menu <span class="text-amber-500">Kami</span></h1>
+        </div>
+    </section>
+
+    <section class="pb-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-xl font-bold uppercase tracking-widest text-amber-500">Coffee Based</h2>
+                    <div class="h-[1px] flex-1 bg-white/10"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Kopi Susu Gula Aren -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://timesindonesia.co.id/_next/image?url=https%3A%2F%2Fcdn-1.timesmedia.co.id%2Fimages%2F2025%2F07%2F15%2FEs-Kopi-Susu-Gula-Aren.jpg&w=3840&q=70" 
+                                alt="Kopi Susu Gula Aren" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold italic">Kopi Susu Gula Aren</h3>
+                                <span class="text-amber-500 font-bold">15K</span>
+                            </div>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                Perpaduan espresso khas Beans dengan susu creamy dan manis alami gula aren yang autentik.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Butterscotch Sea Salt Latte -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://www.lemon8-app.com/seo/image?item_id=7257096051974046209&index=0&sign=d00d3b98ecbb4d119315fb832e577639" 
+                                alt="Butterscotch Sea Salt Latte" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold italic">Butterscotch Sea Salt Latte</h3>
+                                <span class="text-amber-500 font-bold">25K</span>
+                            </div>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                Latte dengan rasa manis karamel butterscotch yang dipadukan dengan sentuhan sea salt yang unik.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Caramel Macchiato -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://deltacoffee.co.id/wp-content/uploads/2023/05/Cara-Membuat-Caramel-Macchiato.jpg" 
+                                alt="Caramel Macchiato" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-xl font-bold italic">Caramel Macchiato</h3>
+                                <span class="text-amber-500 font-bold">20K</span>
+                            </div>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                Espresso berlapis susu dengan sirup vanilla dan drizzle caramel yang manis dan elegan.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-xl font-bold uppercase tracking-widest text-amber-500">Camilan</h2>
+                    <div class="h-[1px] flex-1 bg-white/10"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Roti Bakar Coklat Keju -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://www.frisianflag.com/storage/app/media/uploaded-files/roti-bakar-keju-cokelat.jpg" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Roti Bakar Coklat Keju</h3>
+                                <span class="text-amber-500 font-bold">10K</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Roti bakar hangat dengan lelehan coklat dan keju yang manis gurih.</p>
+                        </div>
+                    </div>
+
+                    <!-- Pisang Goreng Crispy -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://awsimages.detik.net.id/community/media/visual/2022/06/28/resep-pisang-goreng-keriting_43.jpeg?w=600&q=90" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Pisang Goreng Crispy</h3>
+                                <span class="text-amber-500 font-bold">10K</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Pisang goreng renyah dengan topping gula halus dan susu kental manis.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://rricoid-assets.obs.ap-southeast-4.myhuaweicloud.com/berita/Semarang/o/1735532848149-WhatsApp_Image_2024-12-30_at_11.24.46_ed9cac82/ib7waim9cdpkd1f.jpeg" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Mix Platter</h3>
+                                <span class="text-amber-500 font-bold">20K</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Kombinasi camilan favorit: kentang goreng, sosis, nugget, dan saus spesial. Cocok untuk sharing bareng teman.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-xl font-bold uppercase tracking-widest text-amber-500">Teh & Segar</h2>
+                    <div class="h-[1px] flex-1 bg-white/10"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Es Teh Lemon -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://cdn.yummy.co.id/content-images/images/20230505/FmOTT50gY8JgO7jWNlaxlW28yGJXH08Z-31363833323439353836d41d8cd98f00b204e9800998ecf8427e.jpg?x-oss-process=image/resize,w_388,h_388,m_fixed,x-oss-process=image/format,webp" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Es Teh Lemon</h3>
+                                <span class="text-amber-500 font-bold">18k</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Teh segar dengan perasan lemon asli yang menyegarkan.</p>
+                        </div>
+                    </div>
+
+                    <!-- Lychee Tea -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://ganeshaeksanskriti.com/cdn/shop/files/GANESHA-24NOV20229LYCHEEICETEA14855.jpg?v=1703910439&width=1946" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Lychee Tea</h3>
+                                <span class="text-amber-500 font-bold">22k</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Perpaduan teh dengan manis segar buah leci yang ringan.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlaATxxAnTmUaqRzhw0jw9Usy5fWyrmduLdw&s" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Teh Melati</h3>
+                                <span class="text-amber-500 font-bold">10K</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Perpaduan teh dengan wangi melati yang bikin kamu fresh.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-xl font-bold uppercase tracking-widest text-amber-500">Milk Based</h2>
+                    <div class="h-[1px] flex-1 bg-white/10"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Matcha Latte -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://www.umami.recipes/api/image/recipes/8YJkL4JmvZySv0m6WivL/images/Hni7xQZHYfXw5iSCp53VGI?w=3840&q=75" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Matcha Latte</h3>
+                                <span class="text-amber-500 font-bold">28k</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Matcha creamy dengan rasa lembut dan khas Jepang.</p>
+                        </div>
+                    </div>
+
+                    <!-- Coklat Susu -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://thegreencreator.com/wp-content/uploads/EASY-Iced-Chocolate-Drink-Vegan-Cold-incredibly-delicious-and-SO-comforting-TheGreenCreator-recipe-chocolatedrink-glutenfree-icedchocolatedrink-1.jpg" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Coklat Susu</h3>
+                                <span class="text-amber-500 font-bold">25k</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Coklat hangat dengan rasa manis dan creamy.</p>
+                        </div>
+                    </div>
+
+                    <!-- Strawberry Milk -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://tiffycooks.com/wp-content/uploads/2022/07/A43753B1-3D4B-4DD3-9E21-9393AAA74FA2-768x1024.jpg" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Strawberry Milk</h3>
+                                <span class="text-amber-500 font-bold">26k</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Susu segar dengan rasa strawberry manis dan menyegarkan.</p>
+                        </div>
+                    </div>
+
+                    <!-- Taro Milk -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://hungryinthailand.com/wp-content/uploads/2025/03/pouring-taro-bubble-tea-768x1024.webp" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Taro Milk</h3>
+                                <span class="text-amber-500 font-bold">27k</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Minuman susu dengan rasa taro yang manis dan creamy.</p>
+                        </div>
+                    </div>
+
+                    <!-- Vanilla Milk -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://www.allrecipes.com/thmb/Qd8R0_0oOotU9rjJjTcRhKcCSKc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-238627-Vanilla-Milkshakes-without-Ice-Cream-DDMFS-4x3-68c7af8ca6714848a5e4c904996152e3.jpg" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Vanilla Milk</h3>
+                                <span class="text-amber-500 font-bold">25k</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Susu dengan aroma vanilla yang lembut dan manis.</p>
+                        </div>
+                    </div>
+
+                    <!-- Regal Milk -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://www.lemon8-app.com/seo/image?item_id=7089634707415122433&index=0&sign=538b5e4f148c6594c8b28f678de46d37" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Regal Milk</h3>
+                                <span class="text-amber-500 font-bold">28k</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Susu creamy dengan topping biskuit regal yang crunchy.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mb-20">
+                <div class="flex items-center gap-4 mb-10">
+                    <h2 class="text-xl font-bold uppercase tracking-widest text-amber-500">Makanan Berat</h2>
+                    <div class="h-[1px] flex-1 bg-white/10"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Ayam Geprek -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://www.dapurkobe.co.id/wp-content/uploads/ayam-geprek-sambal-korek.jpg" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Ayam Geprek Sambal</h3>
+                                <span class="text-amber-500 font-bold">30k</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Ayam crispy dengan sambal pedas khas Indonesia, disajikan dengan nasi hangat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Nasi Ayam Teriyaki -->
+                    <div class="menu-card group relative overflow-hidden rounded-[2rem] bg-[#111111] border border-white/5">
+                        <div class="aspect-[4/5] overflow-hidden">
+                            <img src="https://asset.kompas.com/crops/-b8jj61ACSloKe1JGBgAGrgXDdU=/3x0:700x465/1200x800/data/photo/2020/12/17/5fdacb3363f6a.jpg" class="w-full h-full object-cover transition-transform duration-700">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex justify-between mb-2">
+                                <h3 class="text-xl font-bold italic">Nasi Ayam Teriyaki</h3>
+                                <span class="text-amber-500 font-bold">32k</span>
+                            </div>
+                            <p class="text-gray-500 text-sm">Ayam dengan saus teriyaki manis gurih disajikan dengan nasi hangat.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-[#0b0b0b] pt-24 pb-12 border-t border-white/5 text-gray-400">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-16 mb-20">
+                
+                <div class="space-y-8">
+                    <div class="text-3xl font-bold tracking-tighter text-white uppercase">
+                        KOPI<span class="text-amber-500">.</span>
+                    </div>
+                    <p class="text-sm leading-relaxed max-w-xs text-gray-500">
+                        Kami adalah ruang komaborasi, tempat di mana biji kopi pilihan bertemu dengan kreativitas tanpa batas. Kunjungi kami untuk pengalaman kopi yang berbeda.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-amber-500 hover:text-white transition-all">
+                            <span class="text-xs font-bold uppercase">Ig</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-amber-500 hover:text-white transition-all">
+                            <span class="text-xs font-bold uppercase">Tk</span>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-amber-500 hover:text-white transition-all">
+                            <span class="text-xs font-bold uppercase">Yt</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Explore</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li><a href="#home" class="hover:text-amber-500 transition">Our Home</a></li>
+                        <li><a href="#about" class="hover:text-amber-500 transition">The Story</a></li>
+                        <li><a href="#menu" class="hover:text-amber-500 transition">Menu Signature</a></li>
+                        <li><a href="#reviews" class="hover:text-amber-500 transition">Customer Review</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-white font-bold uppercase tracking-widest text-xs">Open Hours</h4>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li class="flex justify-between border-b border-white/5 pb-2">
+                            <span>Weekdays</span>
+                            <span class="text-white font-semibold">08:00 - 22:00</span>
+                        </li>
+                        <li class="flex justify-between border-b border-white/5 pb-2 text-amber-500">
+                            <span>Weekends</span>
+                            <span class="font-semibold">07:00 - 23:00</span>
+                        </li>
+                        <li class="text-xs italic text-gray-600 italic leading-relaxed">
+                            *Jam operasional dapat berubah sewaktu-waktu pada hari libur nasional.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-[10px] uppercase tracking-[0.2em] font-semibold text-gray-600">
+                    &copy; 2026 KOPI.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
